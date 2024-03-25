@@ -42,10 +42,6 @@ public class Server {
         }
     }
     
-
-    /**
-     * @wbp.parser.entryPoint
-     */
     
     private void initializeUI() {
         frame = new JFrame();
@@ -70,7 +66,7 @@ public class Server {
                 sendButton = new JButton("Send");
                 sendButton.setEnabled(false);
                 sendButton.addActionListener(new ActionListener() {
-                    @Override
+                   
                     public void actionPerformed(ActionEvent e) {
                         sendMessage();
                     }
@@ -86,7 +82,7 @@ public class Server {
         
                 JButton connectButton = new JButton("Connect");
                 connectButton.addActionListener(new ActionListener() {
-                    @Override
+                    
                     public void actionPerformed(ActionEvent e) {
                         String usernameInput = usernameField.getText();
                         if (!usernameInput.isEmpty()) {
@@ -116,7 +112,7 @@ public class Server {
 
         JButton quitButton = new JButton("Quit");
         quitButton.addActionListener(new ActionListener() {
-            @Override
+           
             public void actionPerformed(ActionEvent e) {
                 shutdown();
             }
@@ -194,9 +190,6 @@ public class Server {
         }
     }
 
-    /**
-     * @wbp.parser.entryPoint
-     */
     public static void main(String[] args) {
         System.out.println("Going to start the server");
         Thread serverThread = new Thread(() -> new Server());
